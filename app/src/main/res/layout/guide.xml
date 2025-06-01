@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#d3d3d3"
+    android:id="@+id/guide">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Character Sheet Philosophy -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Character Sheet Philosophy"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:paddingBottom="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Character Sheet Philosophy
+Setting up your character on DiceCloud is going to take you a little longer than just filling it in on a paper character sheet would have. The goal of using an online sheet is to make actually playing the game more streamlined, and ultimately more fun. So putting a little extra effort into setting up your character now will pay off over and over again once you're playing.\n\n
+
+The idea is to track where each number comes from, and allow you to easily make changes on the fly. Let's look at a hypothetical example.\n\n
+
+You need to swim through a sunken section of dungeon to fetch the quest's Thing.
+You'll need to take off your magical Plate Armor of +1 Constitution to swim without sinking, of course. Taking it off will change your armor class, your speed and your constitution, which in turn changes your hit points and your constitution saving throw. Working out all those changes in the middle of a game will drag the game to a halt.\nFortunately you have a digital character sheet, so it's a matter of dragging your Plate Armor +1 Con from your 'equipment' box to your 'backpack' box and you're done. Your hitpoints change correctly, your saving throws are up to date, your armor class goes back to reflecting the fact that you have natural armor from being a dragonborn. Your character sheet keeps up and you ultimately get more time to play the game. Huzzah!
+
+"               android:textSize="14sp"
+                android:textColor="#333333"
+                android:paddingBottom="16dp" />
+
+            <!-- Creating a Character -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Creating a Character"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:paddingBottom="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="•In the character list, click the plus button, floating in the bottom right corner.\n•Give your character a name, gender and race - these can all be changed later if you change your mind. Then click the Add button.
+•Your new character should open, with your ability scores at a default of 10, but most other attributes at zero."
+                android:textSize="14sp"
+                android:textColor="#333333"
+                android:paddingBottom="16dp" />
+
+            <!-- Adding Racial Effects -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Adding Racial Effects"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:paddingBottom="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="You have already given your character a race, but you haven't yet specified what that race does for your character, so let's do that.\n\n
+•Click the Journal tab.\n•In the card that displays your level, click on your race to open the racial dialog box.\n•Click the edit button (the pencil icon) in the top corner of the racial dialog.\n\nIn the edit mode of the racial dialog you can change your race's name and add effects and proficiencies your race gives you. We will only be adding the base traits our race gives us, specific features can go in the features tab so we can more easily reference them later.
+
+\n\nLet's add some of the effects all races will give.
+
+\n\n•Click the Add Effect button; a new window will open - this is the effect edit dialog.
+\n•In the left menu, scroll down to 'Stats' and choose 'Speed'.
+\n•The right menu let's us choose how to effect that stat. Choose 'Base Value', since our character's base speed comes from their race.
+\n•Finally, input the value for our characters speed, it'll probably be 30 unless you chose a slower race, such as a dwarf.
+\n•Close the Race dialog and navigate to the Stats tab.
+\n•The speed card should now correctly display the character's speed.
+\n•Click the speed card to see how that value was calculated.
+\n•Currently there is only one number effecting the total, the speed from our race, but as more effects from different sources start impacting our character's speed, they will show up here.
+\n\nYou can now also add any other stat changes given yo you by your race, for example a human's +1 to each ability score, or an elf's +2 Dexterity."
+                android:textSize="14sp"
+                android:textColor="#333333"
+                android:paddingBottom="16dp" />
+
+            <!-- Adding Your Ability Scores -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Adding Your Ability Scores"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:paddingBottom="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your character's ability scores are currently all 10 by default - which means that they're no better than your average commoner! Whether you roll your abilities, point-buy them, or just use the standard set of values, you'll need to update them.\n\n•Navigate to the Features tab.
+\n•Select the Base Ability Scores feature, which was added automatically.
+\n•Click the edit button (the pencil icon) in the top right corner.
+\n•Click the pencil icon to the right of your character's Strength to open the effect edit dialog.
+\n•Input your character's rolled or point-bought strength, without the racial modifier.
+\n•Notice that the operation is Base Value by default - this is what we want, as it is the character's base Strength score.
+\n•Repeat for the rest of your ability scores.
+\n\nYou can now check that your ability scores appear on your Stats page and that your skills that use them have their values calculated accordingly.
+
+\n\nWe didn't include your character's racial ability modifiers in the feature, so you should go back to your character's racial dialog and add them in there as effects. Remember to use the add operation, rather than base value, since your race adds to your ability scores.
+
+\n\nBy separating the source of your character's stats you can easily check how your character got their ability scores and stats, even after 20 levels, without getting confused or making mistakes."
+                android:textSize="14sp"
+                android:textColor="#333333"
+                android:paddingBottom="16dp" />
+
+            <!-- Adding a Class -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Adding a Class"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:paddingBottom="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Currently your character is at level 0, because they don't have any class levels. Let's fix that.
+
+\n•Click the plus button in the card that currently says 'Level 0'
+            \n•A new class has now been added, name the class in the Class Name input and leave the level as 1.
+            \n\nWe now have a class, let's add the saving throw proficiencies it gives us.
+
+            \n\n•Click the Add Proficiency button
+            \n•Click the dropdown box that currently has 'Skill' selected, and choose 'Saving Throw' instead
+            \n•In the second dropdown choose the first saving throw your class gives you
+            \n•The third dropdown let's us specify if we have half or double our proficiency bonus for this proficiency, leave it at the default 'proficient' for now
+            \n\nIf you navigate back to the stat page, you will see that you now have a proficiency bonus, based on your class level, and the saving throw you are proficienct in will take your proficiency bonus into account.
+
+            \n\nOne of the most important things your class gives you is your hit points, so let's go add those now.
+
+            \n\n•Navigate to the class dialog box by clicking on your class name in the journal tab and hitting the edit button
+            \n•Click the Add Effect button
+            \n•Scroll down to Stats on the left, and choose the Hit Points stat.
+            \n•Choose the Base Value operation.
+            \n\nNow we need to decide how many hit points our class gives us. We will assume that we take the constant hit points per level, since it's both the rule used for league play and it's statistically advantageous over rolling for hit points every level.
+
+            \n\nWe could work out our hit points every level and change the effect each time, but we can do one better: we can input the calculation directly into the value field and have the character sheet figure it out for us.
+
+            \n\nLet's assume we are creating a fighter, so in the class name you typed in 'Fighter' (with the capital F, but without the quote marks). A fighter gets 10 hp at first level and 6 hitpoints every level after that.
+
+            \n\nLet's rather split that into 4 bonus hit points at first level, and 6 hit points for every fighter level your character has. We can the write this as 4 + 6*FighterLevel where the * represents multiplication.
+
+            \n\nNote that we don't add the constitution modifier here; that's already taken care of by default, since all characters add their constitution modifier to their hit points automatically.
+
+            \n\n•In the value field input 4 + 6*FighterLevel - the spaces aren't needed, but you must spell your class name exactly as it is spelt in the class name input box, capital letters and all, in our case 'Fighter'
+            \n•Create a new effect that sets the base value of d10 Hit Dice to FighterLevel, since we also get a number of hit dice equal to our fighter's level.
+            \n•Check how your changes are reflected in the Stats tab.
+            \n•Change your level and check that the Stats tab gets updated accordingly.
+            \n\nThis method of including calculations in other stats allows you to take full advantage of having a digital character sheet, as it means that you can change any one thing in your character sheet and everthing else will update automatically."
+                android:textSize="14sp"
+                android:textColor="#333333"
+                android:paddingBottom="16dp" />
+
+            <!-- Additional Tips -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Additional Tips"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:paddingBottom="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Any input field with a  light bulb icon is a formula field: it will compute any and all variables and functions within it. For example, the 'Value' field in the effect edit dialog is a formula field, so you could set the value to 3, or FighterLevel*2, or any formula you can think of.
+
+\n\nAny input field with a '{}' curly brackets icon is a smart input field: you can also use formulas here, but they must be enclosed within {curly brackets}. For example, the 'Damage' field of a spell or weapon is a smart input field, so you could type 1d8 + {strengthMod} for the damage, and if your strength modifier was +3, it would display as '1d8 + 3'.
+
+            \n\nThe full list of functions and variables can be found on the GitHub wiki, here.
+
+            \n\nAny description field, as well as some others like your background or description, can be formatted with Markdown. For example, having *asterisks* around something makes it italic, and a **pair** makes it bold. If you need to display an actual asterisk, you can escape it with a backslash, like this: \*.
+           \nYou can read more about Markdown here and here.
+
+            \n\nIn addition, using three or more hyphens on their own line (like this: ' --- '; this is the Markdown for a horizontal rule) will cut off the description of a feature card or any of the cards on the Persona page, so that the full description is only displayed - this is useful when having the full feature text would be annoyingly long, so you can simply display a summary on the card and have it expand into the full text."
+                android:textSize="14sp"
+                android:textColor="#333333"
+                android:paddingBottom="16dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d3d3d3">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Character Sheets Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:background="#168BC34A">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Character Sheets"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="Starter Characters"
+                android:textColor="#666666"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/archer"
+                        android:layout_width="150dp"
+                        android:layout_height="72dp"
+                        android:backgroundTint="#4CAF50"
+                        android:text="Starter Set Archer"
+                        android:textColor="#FFFFFF" />
+
+                    <Button
+                        android:id="@+id/wizard"
+                        android:layout_width="150dp"
+                        android:layout_height="72dp"
+                        android:layout_marginLeft="10dp"
+                        android:backgroundTint="#673AB7"
+                        android:text="Starter Set Wizard"
+                        android:textColor="#FFFFFF" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/Warrior"
+                        android:layout_width="150dp"
+                        android:layout_height="72dp"
+                        android:text="Starter Set Warrior"
+                        android:backgroundTint="#FF0000" />
+
+                    <Button
+                        android:id="@+id/Tank"
+                        android:layout_width="150dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_height="72dp"
+                        android:text="Starter Set Tank"
+                        android:backgroundTint="#1976D2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/Healer"
+                        android:layout_width="150dp"
+                        android:layout_height="72dp"
+                        android:text="Starter Set Healer"
+                        android:backgroundTint="#8BC34A" />
+
+                    <Button
+                        android:id="@+id/Merchant"
+                        android:layout_width="150dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_height="72dp"
+                        android:text="Starter Set Merchant"
+                        android:backgroundTint="#FFC107" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/Thief"
+                        android:layout_width="150dp"
+                        android:layout_height="72dp"
+                        android:text="Starter Set Thief"
+                        android:backgroundTint="#616161" />
+
+                    <Button
+                        android:id="@+id/Bard"
+                        android:layout_width="150dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_height="72dp"
+                        android:text="Starter Set  Bard"
+                        android:backgroundTint="#E91E63" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/Shapeshifter"
+                        android:layout_width="150dp"
+                        android:layout_height="72dp"
+                        android:text="Starter Set Shapeshifter"
+                        android:backgroundTint="#009688" />
+
+                    <Button
+                        android:id="@+id/Tamer"
+                        android:layout_width="150dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_height="72dp"
+                        android:text="Starter Set Tamer"
+                        android:backgroundTint="#795548" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
