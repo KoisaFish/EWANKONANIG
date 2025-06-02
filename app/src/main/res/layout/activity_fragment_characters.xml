@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="16dp">
+
+            <!-- Page Title -->
+            <TextView
+                android:id="@+id/createCharacterText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:gravity="center"
+                android:text="Character Creation Screen"
+                android:textColor="@android:color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <!-- Horizontal Scroll Buttons -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true"
+                android:scrollbars="none">
+            </HorizontalScrollView>
+
+            <EditText
+                android:id="@+id/editableText"
+                android:layout_width="match_parent"
+                android:layout_height="531dp"
+                android:layout_marginTop="20dp"
+                android:background="#EEEEEE"
+                android:hint="No Charater Details"
+                android:padding="12dp"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </ScrollView>
+    <!-- Finish Button (bottom-left) -->
+    <Button
+        android:id="@+id/btnFinish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:layout_margin="16dp"
+        android:text="Finish"
+        android:textSize="16sp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:backgroundTint="@color/scarlet"
+        android:textColor="@android:color/white" />    <!-- Floating Action Button (bottom-right) -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddCharacter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:src="@android:drawable/ic_input_add"
+        app:backgroundTint="@color/scarlet"
+        android:contentDescription="Add Character" />
+</FrameLayout>

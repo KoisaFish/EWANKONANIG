@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#EEEEEE">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Character Description -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Character Description"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:layout_marginTop="12dp" />
+
+        <EditText
+            android:id="@+id/editName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:background="#FFFFFF"
+            android:padding="8dp"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/editRace"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Race"
+            android:background="#FFFFFF"
+            android:padding="8dp"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/editGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="#FFFFFF"
+            android:hint="Gender"
+            android:minHeight="48dp"
+            android:padding="8dp" />
+
+        <EditText
+            android:id="@+id/editRole"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Role (e.g., Fighter, Wizard)"
+            android:background="#FFFFFF"
+            android:padding="8dp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stats"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:layout_marginTop="20dp" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:layout_marginTop="8dp">
+
+            <EditText android:id="@+id/editStrength" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48dp" android:hint="+0 Strength" android:background="#FFFFFF" android:padding="8dp" />
+            <EditText android:id="@+id/editDexterity" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48dp" android:hint="+0 Dexterity" android:background="#FFFFFF" android:padding="8dp" />
+            <EditText android:id="@+id/editConstitution" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48dp" android:hint="+0 Constitution" android:background="#FFFFFF" android:padding="8dp" />
+            <EditText android:id="@+id/editIntelligence" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48dp" android:hint="+0 Intelligence" android:background="#FFFFFF" android:padding="8dp" />
+            <EditText android:id="@+id/editWisdom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48dp" android:hint="+0 Wisdom" android:background="#FFFFFF" android:padding="8dp" />
+            <EditText android:id="@+id/editCharisma" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48dp" android:hint="+0 Charisma" android:background="#FFFFFF" android:padding="8dp" />
+            <EditText android:id="@+id/editArmorClass" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48dp" android:hint="+0 Armor Class" android:background="#FFFFFF" android:padding="8dp" />
+            <EditText android:id="@+id/editSpeed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48dp" android:hint="+0 Speed" android:background="#FFFFFF" android:padding="8dp" />
+            <EditText android:id="@+id/editInitiative" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48dp" android:hint="+0 Initiative" android:background="#FFFFFF" android:padding="8dp" />
+            <EditText android:id="@+id/editProficiencyBonus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48dp" android:hint="+0 Proficiency Bonus" android:background="#FFFFFF" android:padding="8dp" />
+
+        </GridLayout>
+
+        <!-- Skills -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Skills"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:layout_marginTop="8dp">
+
+            <EditText android:id="@+id/editAcrobatics" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48dp" android:hint="+0 Acrobatics" android:background="#FFFFFF" android:padding="8dp" />
+            <EditText android:id="@+id/editAnimalHandling" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48dp" android:hint="+0 Animal Handling" android:background="#FFFFFF" android:padding="8dp" />
+            <EditText android:id="@+id/editArcana" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48dp" android:hint="+0 Arcana" android:background="#FFFFFF" android:padding="8dp" />
+            <EditText android:id="@+id/editAthletics" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48dp" android:hint="+0 Athletics" android:background="#FFFFFF" android:padding="8dp" />
+            <EditText android:id="@+id/editDeception" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48dp" android:hint="+0 Deception" android:background="#FFFFFF" android:padding="8dp" />
+            <EditText android:id="@+id/editHistory" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48dp" android:hint="+0 History" android:background="#FFFFFF" android:padding="8dp" />
+            <EditText android:id="@+id/editInsight" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48dp" android:hint="+0 Insight" android:background="#FFFFFF" android:padding="8dp" />
+            <EditText android:id="@+id/editIntimidation" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48dp" android:hint="+0 Intimidation" android:background="#FFFFFF" android:padding="8dp" />
+            <EditText android:id="@+id/editInvestigation" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48dp" android:hint="+0 Investigation" android:background="#FFFFFF" android:padding="8dp" />
+            <EditText android:id="@+id/editMedicine" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48dp" android:hint="+0 Medicine" android:background="#FFFFFF" android:padding="8dp" />
+            <EditText android:id="@+id/editNature" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48dp" android:hint="+0 Nature" android:background="#FFFFFF" android:padding="8dp" />
+            <EditText android:id="@+id/editPerception" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48dp" android:hint="+0 Perception (10)" android:background="#FFFFFF" android:padding="8dp" />
+            <EditText android:id="@+id/editPerformance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48dp" android:hint="+0 Performance" android:background="#FFFFFF" android:padding="8dp" />
+            <EditText android:id="@+id/editPersuasion" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48dp" android:hint="+0 Persuasion" android:background="#FFFFFF" android:padding="8dp" />
+            <EditText android:id="@+id/editReligion" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48dp" android:hint="+0 Religion" android:background="#FFFFFF" android:padding="8dp" />
+            <EditText android:id="@+id/editSleightOfHand" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48dp" android:hint="+0 Sleight of Hand" android:background="#FFFFFF" android:padding="8dp" />
+            <EditText android:id="@+id/editStealth" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48dp" android:hint="+0 Stealth" android:background="#FFFFFF" android:padding="8dp" />
+            <EditText android:id="@+id/editSurvival" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48dp" android:hint="+0 Survival" android:background="#FFFFFF" android:padding="8dp" />
+        </GridLayout>
+
+        <!-- Additional Description Sections -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Features"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/editFeatures"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="#FFFFFF"
+            android:gravity="top"
+            android:hint="Describe character features..."
+            android:inputType="textMultiLine"
+            android:padding="8dp"
+            android:scrollbars="vertical" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inventory"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/editInventory"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="#FFFFFF"
+            android:gravity="top"
+            android:hint="Describe inventory items..."
+            android:inputType="textMultiLine"
+            android:padding="8dp"
+            android:scrollbars="vertical" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Spells"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/editSpells"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="#FFFFFF"
+            android:gravity="top"
+            android:hint="List or describe spells..."
+            android:inputType="textMultiLine"
+            android:padding="8dp"
+            android:scrollbars="vertical" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Persona"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/editPersona"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="#FFFFFF"
+            android:gravity="top"
+            android:hint="Describe personality traits..."
+            android:inputType="textMultiLine"
+            android:padding="8dp"
+            android:scrollbars="vertical" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Journal"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/editJournal"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="#FFFFFF"
+            android:gravity="top"
+            android:hint="Write journal entries here..."
+            android:inputType="textMultiLine"
+            android:padding="8dp"
+            android:scrollbars="vertical" />
+
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/btnSaveCharacter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Character"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:padding="12dp" />
+
+    </LinearLayout>
+</ScrollView>

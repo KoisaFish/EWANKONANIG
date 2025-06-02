@@ -14,7 +14,19 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
 
+        <activity android:name=".BardCharacterActivity" />
+        <activity android:name=".ThiefCharacterActivity" />
+        <activity android:name=".MerchantCharacterActivity" />
+        <activity android:name=".HealerCharacterActivity" />
+        <activity android:name=".WarriorCharacterActivity" />
+        <activity android:name=".TankCharacterActivity" />
+        <activity android:name=".WizardCharacterActivity" />
+        <activity android:name=".TamerCharacterActivity" />
+        <activity android:name=".ArcherCharacterActivity" />
+        <activity android:name=".ShapeshifterCharacterActivity" />
 
+        <activity android:name=".CharacterSheetActivity" />
+        <activity android:name=".FragmentCharacters" />
         <activity
             android:name=".ImpliActivity2"
             android:exported="false" />
@@ -23,7 +35,8 @@
             android:exported="false" />
         <activity
             android:name=".Activity2"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.MyApplication"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">

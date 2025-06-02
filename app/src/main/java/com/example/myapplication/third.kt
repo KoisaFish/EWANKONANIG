@@ -1,17 +1,15 @@
 package com.example.myapplication
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.Switch
+import android.view.*
+import android.widget.LinearLayout
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
-import androidx.appcompat.app.AppCompatDelegate
 
 class ThirdFragment : Fragment() {
-
-    private lateinit var darkModeSwitch: Switch
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -19,26 +17,50 @@ class ThirdFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_third, container, false)
 
-        val sharedPref = requireActivity().getSharedPreferences("settings", Context.MODE_PRIVATE)
-        val isDarkMode = sharedPref.getBoolean("dark_mode", false)
+        // Handle Clear Data
+        val clearDataLayout = view.findViewById<LinearLayout>(R.id.cleardata)
+        clearDataLayout.setOnClickListener {
+            AlertDialog.Builder(requireContext())
+                .setTitle("Clear Data")
+                .setMessage("Do you want to clear all the data including your characters created?")
+                .setPositiveButton("Yes") { dialog, _ ->
+                    val sharedPref = requireContext().getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
+                    sharedPref.edit().clear().apply()
 
-        // Set switch state
-        darkModeSwitch = view.findViewById(R.id.switchDarkMode)
-        darkModeSwitch.isChecked = isDarkMode
+                    Toast.makeText(requireContext(), "All Character has been Cleared!", Toast.LENGTH_SHORT).show()
 
-        darkModeSwitch.setOnCheckedChangeListener { _, isChecked ->
-            val editor = sharedPref.edit()
-            if (isChecked) {
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-                editor.putBoolean("dark_mode", true)
-            } else {
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-                editor.putBoolean("dark_mode", false)
-            }
-            editor.apply()
+                    val fragmentManager = parentFragmentManager
+                    val createCharacterFragment = fragmentManager.findFragmentByTag("CreateCharacter")
+                    if (createCharacterFragment is CreateCharacter) {
+                        createCharacterFragment.resetCharacterUI()
+                    }
 
-            // Restart activity to apply theme
-            requireActivity().recreate()
+                    dialog.dismiss()
+                }
+                .setNegativeButton("No") { dialog, _ ->
+                    dialog.dismiss()
+                }
+                .create()
+                .show()
+        }
+
+        // Handle Logout
+        val logoutLayout = view.findViewById<LinearLayout>(R.id.optionLogout)
+        logoutLayout.setOnClickListener {
+            AlertDialog.Builder(requireContext())
+                .setTitle("Logout")
+                .setMessage("Do you want to Logout?")
+                .setPositiveButton("Yes") { dialog, _ ->
+                    val intent = Intent(requireActivity(), MainActivity::class.java)
+                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    startActivity(intent)
+                    requireActivity().finish()
+                }
+                .setNegativeButton("No") { dialog, _ ->
+                    dialog.dismiss()
+                }
+                .create()
+                .show()
         }
 
         return view

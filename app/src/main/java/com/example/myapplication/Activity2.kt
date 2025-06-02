@@ -40,7 +40,13 @@ class Activity2 : AppCompatActivity(), NavigationView.OnNavigationItemSelectedLi
 
         // Fragments
         val homeFragment = Fragment_First()
-        val profileFragment = ProfileFragment()
+
+        val profileFragment = ProfileFragment().apply {
+            arguments = Bundle().apply {
+                putString("username", intent.getStringExtra("val1"))
+            }
+        }
+
         val settingsFragment = ThirdFragment()
         characterFragment = CreateCharacter()
         guideFragment = GuideFragment() // FIXED: Changed from guideFragment() to GuideFragment()

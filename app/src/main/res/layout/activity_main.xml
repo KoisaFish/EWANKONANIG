@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:padding="16dp"
     android:gravity="center"
-    android:background="#bebebe"
+    android:background="#3f3f3f"
     android:id="@+id/login">
 
     <LinearLayout
@@ -35,13 +35,7 @@
             android:textStyle="bold" />
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            android:text="Login"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+
 
         <EditText
             android:id="@+id/Username"
@@ -59,7 +53,7 @@
             android:layout_marginTop="24dp"
             android:backgroundTint="@color/scarlet"
             android:padding="12dp"
-            android:text="Login"
+            android:text="Enter"
             android:textColor="#FFFFFF" />
 
     </LinearLayout>

@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.*
 import android.widget.Button
 import android.widget.TextView
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
@@ -15,8 +16,14 @@ class CreateCharacter : Fragment() {
     private lateinit var fab: FloatingActionButton
     private lateinit var waka: TextView
 
-    companion object {
-        const val CHARACTER_CREATED_RESULT = 100
+    private val createCharacterLauncher = registerForActivityResult(
+        ActivityResultContracts.StartActivityForResult()
+    ) { result ->
+        if (result.resultCode == Activity.RESULT_OK) {
+            waka.visibility = View.GONE
+            addCharacterBtn.visibility = View.VISIBLE
+            addCharacterBtn.text = "Character 1"
+        }
     }
 
     override fun onCreateView(
@@ -34,7 +41,7 @@ class CreateCharacter : Fragment() {
 
         val launchCreate = {
             val intent = Intent(requireContext(), FragmentCharacters::class.java)
-            startActivityForResult(intent, CHARACTER_CREATED_RESULT)
+            createCharacterLauncher.launch(intent)
         }
 
         addCharacterBtn.setOnClickListener { launchCreate() }
@@ -43,12 +50,9 @@ class CreateCharacter : Fragment() {
         return view
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-
-        if (requestCode == CHARACTER_CREATED_RESULT && resultCode == Activity.RESULT_OK) {
-            waka.visibility = View.GONE
-            addCharacterBtn.visibility = View.GONE
-        }
+    fun resetCharacterUI() {
+        waka?.visibility = View.VISIBLE
+        addCharacterBtn?.visibility = View.VISIBLE
+        addCharacterBtn?.text = ""
     }
 }

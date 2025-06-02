@@ -10,62 +10,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <!-- Dark Mode Toggle -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:paddingVertical="12dp">
 
-            <ImageView
-                android:layout_width="68dp"
-                android:layout_height="59dp"
-                android:layout_marginEnd="12dp"
-                android:src="@drawable/moon" />
 
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Dark Mode"
-                android:textSize="20sp" />
 
-            <Switch
-                android:id="@+id/switchDarkMode"
-                android:layout_width="42dp"
-                android:layout_height="42dp" />
-        </LinearLayout>
 
-        <!-- Change Password -->
-        <LinearLayout
-            android:id="@+id/optionChangePassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:paddingVertical="12dp">
-
-            <ImageView
-                android:layout_width="68dp"
-                android:layout_height="59dp"
-                android:layout_marginEnd="12dp"
-                android:src="@drawable/lock_open" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Change Password"
-                android:textSize="20sp" />
-
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/arrow_right_stroke" />
-        </LinearLayout>
-
-        <!-- Language -->
+        <!-- ClearData -->
         <LinearLayout
             android:id="@+id/cleardata"
             android:layout_width="match_parent"
